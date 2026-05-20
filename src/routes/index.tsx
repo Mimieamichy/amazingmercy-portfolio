@@ -5,6 +5,7 @@ import projBoardoverse from "../assets/project-boardoverse.jpg";
 import projEdubuddy from "../assets/project-edubuddy.jpg";
 import projEtds from "../assets/project-etds.jpg";
 import projEcom from "../assets/project-ecommerce.jpg";
+import image from "../assets/team-real-1.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -58,34 +59,34 @@ function Hero() {
             <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
               Portfolio — 2026 ©
             </p>
-            <h1 className="font-serif leading-[0.85] text-foreground text-[18vw] md:text-[12vw] lg:text-[10.5vw]">
+            <h1 className="font-serif leading-[0.85] text-foreground text-[15vw] sm:text-[14vw] md:text-[12vw] lg:text-[9.3vw]">
               Amazing<span className="italic text-accent">mercy</span>
             </h1>
-            <div className="mt-8 flex flex-wrap items-baseline gap-x-8 gap-y-3 font-serif text-2xl md:text-4xl">
+            <div className="mt-8 flex flex-wrap items-baseline gap-x-6 md:gap-x-8 gap-y-3 font-serif text-xl sm:text-2xl md:text-4xl">
               <span>Backend Architecture</span>
               <span className="italic text-accent">API Design</span>
               <span>Database Engineering</span>
               <span className="italic text-accent">Payments</span>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-5 flex md:justify-end">
-            <div className="relative w-full max-w-md">
+          <div className="col-span-12 md:col-span-5 flex md:justify-end mt-12 md:mt-0">
+            <div className="relative w-full max-w-[280px] sm:max-w-md mx-auto md:mx-0">
               <img
-                src={portrait}
+                src={image}
                 alt="Portrait of Amazingmercy"
                 width={1024}
                 height={1024}
                 className="w-full h-auto grayscale"
               />
-              <div className="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-foreground text-background flex items-center justify-center animate-spin-slow ring-2 ring-accent">
-                <svg viewBox="0 0 100 100" className="w-full h-full p-2">
+              <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-20 h-20 md:w-28 md:h-28 rounded-full bg-foreground text-background flex items-center justify-center animate-spin-slow ring-1 md:ring-2 ring-accent">
+                <svg viewBox="0 0 100 100" className="w-full h-full p-1.5 md:p-2">
                   <defs>
                     <path
                       id="circle"
                       d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"
                     />
                   </defs>
-                  <text className="text-[10.5px] uppercase tracking-[0.2em] fill-background font-sans">
+                  <text className="text-[11px] md:text-[10.5px] uppercase tracking-[0.2em] fill-background font-sans">
                     <textPath href="#circle">
                       Available for hire · Backend · API · 
                     </textPath>
@@ -96,59 +97,31 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-14 md:mt-20 grid grid-cols-12 gap-6 items-end border-t border-foreground/15 pt-8">
-          <div className="col-span-12 md:col-span-4">
+        <div className="mt-14 md:mt-20 grid grid-cols-12 gap-y-8 gap-x-6 items-start md:items-end border-t border-foreground/15 pt-8">
+          <div className="col-span-12 sm:col-span-6 md:col-span-4">
             <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">
               Based in
             </p>
-            <p className="font-serif text-3xl">Nigeria — Remote worldwide</p>
+            <p className="font-serif text-2xl md:text-3xl">Nigeria — Remote worldwide</p>
           </div>
-          <div className="col-span-12 md:col-span-5">
+          <div className="col-span-12 sm:col-span-6 md:col-span-5">
             <p className="font-sans text-base md:text-lg text-foreground/80 max-w-xl">
               A backend developer building scalable APIs, payment integrations,
               and resilient data layers — turning messy requirements into clean,
               shippable software.
             </p>
           </div>
-          <div className="col-span-12 md:col-span-3 flex md:justify-end gap-3">
+          <div className="col-span-12 md:col-span-3 flex md:justify-end">
             <a
               href={CV_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-xs uppercase tracking-[0.2em] hover:opacity-90 transition"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background px-6 py-4 md:py-3 text-xs uppercase tracking-[0.2em] hover:opacity-90 transition"
             >
               Download CV ↓
             </a>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function Marquee() {
-  const items = [
-    "Node.js",
-    "TypeScript",
-    "PostgreSQL",
-    "MongoDB",
-    "Docker",
-    "REST APIs",
-    "Socket.IO",
-    "CI / CD",
-    "Express",
-    "Sequelize",
-  ];
-  const row = [...items, ...items, ...items];
-  return (
-    <section className="border-y border-foreground/15 overflow-hidden py-6 bg-background">
-      <div className="flex gap-12 whitespace-nowrap animate-marquee font-serif text-4xl md:text-6xl">
-        {row.map((t, i) => (
-          <span key={i} className="flex items-center gap-12">
-            <span className={i % 2 ? "italic text-muted-foreground" : ""}>{t}</span>
-            <span aria-hidden className="text-foreground/40">✶</span>
-          </span>
-        ))}
       </div>
     </section>
   );
@@ -438,7 +411,7 @@ function Contact() {
           <div className="col-span-12 md:col-span-6">
             <a
               href={`mailto:${EMAIL}`}
-              className="font-serif text-3xl md:text-5xl underline decoration-foreground/30 underline-offset-8 hover:decoration-foreground transition"
+              className="font-serif text-2xl md:text-5xl underline decoration-foreground/30 underline-offset-8 hover:decoration-foreground transition"
             >
               {EMAIL}
             </a>
@@ -457,6 +430,9 @@ function Contact() {
                 >
                   GitHub ↗
                 </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/amazing-mercy-1012133b5" className="hover:italic">LinkedIn ↗</a>
               </li>
               <li>
                 <a href={`mailto:${EMAIL}`} className="hover:italic">Email ↗</a>
@@ -527,7 +503,6 @@ function Index() {
     <main className="bg-background text-foreground pb-20 md:pb-0">
       <Nav />
       <Hero />
-      <Marquee />
       <About />
       <Skills />
       <Work />
