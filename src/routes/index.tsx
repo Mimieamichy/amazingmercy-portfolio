@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Briefcase, User, Wrench, Mail } from "lucide-react";
 import portrait from "../assets/portrait.jpg";
 import projBoardoverse from "../assets/project-boardoverse.jpg";
 import projEdubuddy from "../assets/project-edubuddy.jpg";
@@ -38,7 +39,7 @@ function Nav() {
         </nav>
         <a
           href={`mailto:${EMAIL}`}
-          className="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] border border-foreground rounded-full px-4 py-2 hover:bg-foreground hover:text-background transition"
+          className="hidden md:inline-flex group items-center gap-2 text-xs uppercase tracking-[0.2em] border border-foreground rounded-full px-4 py-2 hover:bg-foreground hover:text-background transition"
         >
           Let's talk
           <span className="inline-block transition-transform group-hover:translate-x-1">↗</span>
@@ -58,13 +59,13 @@ function Hero() {
               Portfolio — 2026 ©
             </p>
             <h1 className="font-serif leading-[0.85] text-foreground text-[18vw] md:text-[12vw] lg:text-[10.5vw]">
-              Amazing<span className="italic">mercy</span>
+              Amazing<span className="italic text-accent">mercy</span>
             </h1>
             <div className="mt-8 flex flex-wrap items-baseline gap-x-8 gap-y-3 font-serif text-2xl md:text-4xl">
               <span>Backend Architecture</span>
-              <span className="italic text-muted-foreground">API Design</span>
+              <span className="italic text-accent">API Design</span>
               <span>Database Engineering</span>
-              <span className="italic text-muted-foreground">Payments</span>
+              <span className="italic text-accent">Payments</span>
             </div>
           </div>
           <div className="col-span-12 md:col-span-5 flex md:justify-end">
@@ -76,7 +77,7 @@ function Hero() {
                 height={1024}
                 className="w-full h-auto grayscale"
               />
-              <div className="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-foreground text-background flex items-center justify-center animate-spin-slow">
+              <div className="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-foreground text-background flex items-center justify-center animate-spin-slow ring-2 ring-accent">
                 <svg viewBox="0 0 100 100" className="w-full h-full p-2">
                   <defs>
                     <path
@@ -165,7 +166,7 @@ function About() {
         <div className="col-span-12 md:col-span-9">
           <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95]">
             Resourceful, solution-driven, and quietly obsessed with{" "}
-            <span className="italic">systems that scale.</span>
+            <span className="italic text-accent">systems that scale.</span>
           </h2>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 text-foreground/80">
             <p>
@@ -190,7 +191,7 @@ function About() {
               ["∞", "Bugs squashed"],
             ].map(([n, l]) => (
               <div key={l}>
-                <dt className="font-serif text-5xl md:text-6xl">{n}</dt>
+                <dt className="font-serif text-5xl md:text-6xl text-accent">{n}</dt>
                 <dd className="mt-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
                   {l}
                 </dd>
@@ -230,7 +231,7 @@ function Skills() {
             (02) Capabilities
           </p>
           <h2 className="mt-6 font-serif text-5xl md:text-6xl leading-[0.95]">
-            What I bring <span className="italic">to the table.</span>
+            What I bring <span className="italic text-accent">to the table.</span>
           </h2>
         </div>
         <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-x-10">
@@ -365,7 +366,7 @@ function Work() {
               className="group border-b border-foreground/15 py-8 md:py-12"
             >
               <div className="grid grid-cols-12 gap-6 items-center">
-                <div className="col-span-2 md:col-span-1 font-serif text-2xl md:text-3xl text-muted-foreground">
+                <div className="col-span-2 md:col-span-1 font-serif text-2xl md:text-3xl text-accent">
                   {p.index}
                 </div>
                 <div className="col-span-10 md:col-span-4">
@@ -431,7 +432,7 @@ function Contact() {
           (04) Contact
         </p>
         <h2 className="mt-8 font-serif text-[16vw] md:text-[11vw] leading-[0.85]">
-          Let's build <span className="italic">something.</span>
+          Let's build <span className="italic text-accent">something.</span>
         </h2>
         <div className="mt-12 grid grid-cols-12 gap-6 border-t border-foreground/15 pt-10">
           <div className="col-span-12 md:col-span-6">
