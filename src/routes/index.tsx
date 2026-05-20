@@ -481,6 +481,34 @@ function Contact() {
     </section>
   );
 }
+function BottomNav() {
+  const links = [
+    { href: "#work", label: "Work", icon: Briefcase },
+    { href: "#about", label: "About", icon: User },
+    { href: "#skills", label: "Skills", icon: Wrench },
+    { href: "#contact", label: "Contact", icon: Mail },
+  ];
+
+  return (
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-t border-foreground/10 md:hidden">
+      <div className="flex items-center justify-around py-3">
+        {links.map((l) => {
+          const Icon = l.icon;
+          return (
+            <a
+              key={l.label}
+              href={l.href}
+              className="flex flex-col items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground hover:text-accent transition"
+            >
+              <Icon className="w-5 h-5" />
+              <span>{l.label}</span>
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
 
 function Footer() {
   return (
@@ -496,7 +524,7 @@ function Footer() {
 
 function Index() {
   return (
-    <main className="bg-background text-foreground">
+    <main className="bg-background text-foreground pb-20 md:pb-0">
       <Nav />
       <Hero />
       <Marquee />
@@ -505,6 +533,7 @@ function Index() {
       <Work />
       <Contact />
       <Footer />
+      <BottomNav />
     </main>
   );
 }
