@@ -5,7 +5,11 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/server.ts",
   "alias": {
-    "tanstack-start-injected-head-scripts:b": "./node_modules/@tanstack/start-server-core/dist/virtual-modules/injected-head-scripts-b.mjs",
-    "tanstack-start-injected-head-scripts:v": "./node_modules/@tanstack/start-server-core/dist/virtual-modules/injected-head-scripts-v.mjs"
+    "#tanstack-router-entry": "./node_modules/@tanstack/router-core/dist/index.mjs",
+    "#tanstack-start-entry": "./node_modules/@tanstack/start-server-core/dist/esm/index.js",
+    "#tanstack-start-plugin-adapters": "./node_modules/@tanstack/start-server-core/dist/esm/adapters/index.js",
+    "tanstack-start-manifest:v": "./node_modules/@tanstack/start-server-core/dist/virtual-modules/manifest-v.mjs",
+    "tanstack-start-injected-head-scripts:v": "./node_modules/@tanstack/start-server-core/dist/virtual-modules/injected-head-scripts-v.mjs",
+    "tanstack-start-injected-head-scripts:b": "./node_modules/@tanstack/start-server-core/dist/virtual-modules/injected-head-scripts-b.mjs"
   }
 }
